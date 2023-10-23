@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+
+            } else {
+                return confirm('Nein, nur mit Erwacksenen!');
+                
+            }
+        }
+
+
+        function showPrimes(n) {
+            nextPrime: for (let i = 2; i < n; i++) {
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) continue nextPrime;
+                }
+
+                alert( i );
+            }
+        }
+       
+        function ChAge(age) {
+            let message = age >= 18 ? 'Разрешено' : 'Не разрешено!';
+            return message;
+        }
+
+        /*
+        function ChAge(age) {
+            return (age > 18) || confirm('Ja!');
+        }
+        let age = prompt('Возраст: ', 18);
+        age = parseInt(age); // Преобразование введенной строки в число
+        alert((ChAge(age) && 'Вы старше 18 лет или подтвердили действие.') || 'Вы младше 18 лет и отказались от действия.');
+*/ 
+
+
+
+// Наименьшее значение отдает обратно
+/*
+        function main(a, b) {
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+
+        let a = prompt('Введите первое число: ');
+        let b = prompt('Введите второе число для сравнение с первым: ');
+        alert(main(a, b));
+*/
+        
+// Функция возведения в степень.
+
+        function pow(x, y) {
+            const res = x ** y;
+            return res;
+        }
+
+        let x = prompt('Введите сичло : ');
+        let y = prompt('Введите степень для числа: ');
+        confirm(pow(x, y));
+
+
+    </script>
+   
+    
+</body>
+</html>

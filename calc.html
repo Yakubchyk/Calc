@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор стоимости клише</title>
+</head>
+<body>
+    <h1>Калькулятор стоимости клише</h1>
+    <p>Введите параметры макета:</p>
+    <label for="lengthInput">Длина (см):</label>
+    <input type="number" id="lengthInput" step="0.01"><br>
+    <label for="widthInput">Ширина (см):</label>
+    <input type="number" id="widthInput" step="0.01"><br>
+    <label for="pricePerSquareCmInput">Стоимость за 1 см² (руб):</label>
+    <input type="number" id="pricePerSquareCmInput" step="0.01"><br>
+    <button onclick="calculateCost()">Рассчитать стоимость</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateCost() {
+            // Получаем значения из полей ввода
+            const length = parseFloat(document.getElementById("lengthInput").value);
+            const width = parseFloat(document.getElementById("widthInput").value);
+            const pricePerSquareCm = parseFloat(document.getElementById("pricePerSquareCmInput").value);
+
+            // Проверяем, что введены корректные числовые значения
+            if (isNaN(length) || isNaN(width) || isNaN(pricePerSquareCm)) {
+                alert("Пожалуйста, введите корректные числовые значения.");
+                return;
+            }
+
+            // Рассчитываем стоимость клише
+            const area = length * width; // Площадь в квадратных сантиметрах
+            const cost = area * pricePerSquareCm; // Стоимость клише
+
+            // Выводим результат
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `Стоимость клише: ${cost.toFixed(2)} руб.`;
+        }
+    </script>
+</body>
+</html>
