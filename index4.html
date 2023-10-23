@@ -17,7 +17,7 @@
             sum += salaries[key];
         }
         alert(sum);
-        
+
         var user = {
             name: 'John',
             alt: 35,
@@ -25,9 +25,24 @@
             kostet: 150
         };
 
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+        
+        function multyPly(menu) {
+            for (let key in menu) {
+                if (typeof menu[key] == 'number') {
+                    menu[key] *= 2;
+                    }
+                }
+        }
+        
+
         var key = prompt('Что вы хотите узнать ?', 'name');
         alert(user[key]);
-  
+
     </script>
 </body>
 </html>­­
