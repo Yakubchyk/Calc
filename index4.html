@@ -7,19 +7,27 @@
 </head>
 <body>
     <script>
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        };
+        var sum = 0;
+        for (var key in salaries) {
+            sum += salaries[key];
+        }
+        alert(sum);
+        
         var user = {
             name: 'John',
-            alt: 35
-        };
-
-        var sache = {
+            alt: 35,
             jacke: 'Jeans',
             kostet: 150
         };
-        
-        alert(user.alt);
-        alert(sache.jacke);
-        
+
+        var key = prompt('Что вы хотите узнать ?', 'name');
+        alert(user[key]);
+  
     </script>
 </body>
-</html>
+</html>­­
