@@ -40,6 +40,9 @@ module.exports = {
 		],
 		'no-unused-vars': [
 			'warn'
+		],
+		'no-constant-condition': [
+			'warn'
 		]
 	}
 };
